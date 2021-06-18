@@ -4,6 +4,8 @@ import 'package:advancewidget/login.dart';
 import 'package:advancewidget/sign.dart';
 import 'package:flutter/material.dart';
 
+//  LISTVIEW
+
 // class Home extends StatefulWidget {
 //   const Home({Key? key}) : super(key: key);
 
@@ -24,6 +26,8 @@ import 'package:flutter/material.dart';
 //     );
 //   }
 // }
+
+//  LISTVIEW.BUILDER
 
 // class Home extends StatefulWidget {
 //   const Home({Key? key}) : super(key: key);
@@ -49,6 +53,8 @@ import 'package:flutter/material.dart';
 //   }
 // }
 
+//  LISTVIEW.BUILDER WITH IMAGES
+
 // class Home extends StatefulWidget {
 //   const Home({Key? key}) : super(key: key);
 
@@ -73,6 +79,8 @@ import 'package:flutter/material.dart';
 //             }));
 //   }
 // }
+
+//  GRARID VIEW.COUNT
 
 // class Home extends StatefulWidget {
 //   const Home({Key? key}) : super(key: key);
@@ -104,6 +112,8 @@ import 'package:flutter/material.dart';
 //   }
 // }
 
+// DRAWER NAVIGATION
+
 // class Home extends StatefulWidget {
 //   const Home({Key? key}) : super(key: key);
 
@@ -132,6 +142,40 @@ import 'package:flutter/material.dart';
 //   }
 // }
 
+//  TAB NAVIGATION
+
+// class Home extends StatefulWidget {
+//   const Home({Key? key}) : super(key: key);
+
+//   @override
+//   _HomeState createState() => _HomeState();
+// }
+
+// class _HomeState extends State<Home> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return DefaultTabController(
+//       length: 2,
+//       child: Scaffold(
+//         appBar: AppBar(
+//           title: Text("dkjhfkdhfkhd"),
+//           bottom: TabBar(
+//           unselectedLabelColor: Colors.red,
+//           labelColor: Colors.green,
+//           indicatorColor: Colors.brown,
+//           tabs: [
+//           Tab(child: Text("data"),),
+//           Tab(child: Text("yeuiyrey"),)
+//         ]),),
+//         body: TabBarView(children: [
+//           Login(),
+//           Signup()
+//         ]),
+//       ),
+//     );
+//   }
+// }
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -140,29 +184,41 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  var text = 1;
+  one() {
+    setState(() {
+      text  += 1;
+    });
+  }
+
+  // two() {
+  //   setState(() {
+  //     text = "2"; 
+  //   });
+  // }
+
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text("dkjhfkdhfkhd"),
-          bottom: TabBar(
-          unselectedLabelColor: Colors.red,
-          labelColor: Colors.green,
-          indicatorColor: Colors.brown,
-          tabs: [
-          Tab(child: Text("data"),),
-          Tab(child: Text("yeuiyrey"),)
-        ]),),
-        body: TabBarView(children: [
-          Login(),
-          Signup()
-        ]),
+    return Scaffold(
+        body: Center(
+      child: Column(
+        children: [
+          Text("Text: $text "),
+          SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(onPressed:one, child: Text("sdfsd ")),
+          SizedBox(
+            height: 20,
+          ),
+          // ElevatedButton(onPressed: two, child: Text("sdfsd ")),
+        ],
       ),
-    );
+    ));
   }
 }
+
+//  ADD ICON
 
 // Widget abc(var name) {
 //   return Container(
